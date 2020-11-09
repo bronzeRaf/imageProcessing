@@ -86,3 +86,35 @@ In the folder "examples" you can find an input image named "example.jpg" and a s
 	- ex3case1.jpg if you uncomment the Case 1 code block
 	- ex3case2.jpg if you uncomment the Case 2 code block
 	- ex3case3.jpg if you uncomment the Case 3 code block
+
+## Im2Text
+A set of functions, able to transform an image containing rotated text to text. The project is able to rotate the image to fit text on an horizontal orientation, to divide text into words and letters and to classify letter images. 
+
+#### To run the project features use the following...
+
+- To transform an image containing black text on white background, to a cell array containing the text of each text line of the image run:
+```lines = readtext(x);```
+	- x = the input image
+	
+- To rotate an image containing black text on white background, to have the text on a horizontal orientation run:
+```y = fixrotation(x);```
+	- x = the input image
+	
+- To divide an image containing black text on white background, to a cell array containing separate images for every text line run:
+```imageLines = givemeline(x);```
+	- x = the input image
+
+- To divide an image containing a black text line on white background, to a cell array containing separate images for every word run:
+```imageWords = givemeword(x);```
+	- x = the input image
+
+- To divide an image containing a black text word on white background, to a cell array containing separate images for every letter run:
+```imageLetters = givemeletter(x);```
+	- x = the input image
+
+#### Examples
+In the "examples" folder you can see an example input image named "example.png". 
+- rotated.png = The result image after the rotation using fixrotation(x)
+- line.png = A sample image after the line separation using givemeline(x)
+- word.png = A sample image after the word separation using givemeword(x)
+- letter.png = A sample image after the letter separation using givemeletter(x)
